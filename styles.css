@@ -1,0 +1,143 @@
+/*
+ * NESTIO. | STYLES.CSS - PÁGINA "PRÓXIMAMENTE"
+ *
+ * ¡Contenido simplificado para un lanzamiento en espera!
+ * Mantiene la identidad visual de nestio.
+ *
+ */
+
+/* --- CONFIGURACIÓN AMIGABLE (TUS PROPIAS VARIABLES) --- */
+:root {
+  --color-bg: #F7F5F0;       /* Crema muy suave */
+  --color-surface: #FFFFFF;  /* Blanco puro para tarjetas */
+  --color-primary: #23252c;  /* Gris Antracita */
+  --color-accent: #D97050;   /* Terracota Cálido */
+  --color-text-main: #2D3038;
+  --color-text-light: #6B6E76;
+
+  --radius-pill: 100px;
+
+  --font-main: 'Manrope', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+}
+
+/* --- RESET & BASE --- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--color-bg);
+    color: var(--color-text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    /* Aseguramos que no haya scroll horizontal no deseado */
+    overflow-x: hidden;
+    text-align: center; /* Centramos todo por defecto */
+}
+
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+/* --- COMPONENTES BÁSICOS DE TU MARCA --- */
+
+/* LOGO */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  font-size: 1.8rem; /* Un poco más grande para el centro de la página */
+  letter-spacing: -0.03em;
+  color: var(--color-primary);
+}
+
+.logo-mark {
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  opacity: 0.8;
+  color: var(--color-accent); /* Usamos el color de acento en el corchete */
+}
+
+.logo-text {
+  letter-spacing: -0.03em;
+}
+
+
+/* BOTONES (Reutilizamos la estética principal) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn--primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+.btn--primary:hover {
+  background-color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(217, 112, 80, 0.3);
+}
+
+/* --- ESTILOS DE LA PÁGINA "PRÓXIMAMENTE" --- */
+
+.coming-soon-container {
+    /* Flexbox para centrar contenido vertical y horizontalmente */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+    padding: 20px;
+}
+
+.coming-soon-logo {
+    margin-bottom: 30px;
+    /* Escalamos el logo un poco más para que destaque */
+    transform: scale(1.1);
+}
+
+.coming-soon-title {
+    font-size: clamp(1.8rem, 4vw, 3rem); /* Responsivo */
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+    max-width: 700px;
+    color: var(--color-primary);
+}
+
+.coming-soon-message {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--color-text-light);
+    margin-bottom: 40px;
+    max-width: 500px;
+}
+
+.coming-soon-cta {
+    font-size: 1.05rem;
+    padding: 16px 36px;
+}
+
+/* --- RESPONSIVO PARA MÓVILES --- */
+@media (max-width: 600px) {
+    .coming-soon-logo {
+        transform: scale(1.0);
+    }
+    .coming-soon-title {
+        font-size: 1.8rem;
+    }
+    .coming-soon-message {
+        font-size: 1rem;
+    }
+    .coming-soon-cta {
+        width: 100%;
+        max-width: 300px;
+    }
+}
