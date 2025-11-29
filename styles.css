@@ -1,82 +1,89 @@
 /* variables */
 :root {
-  --color-bg: #F7F5F0;
-  --color-primary: #23252c;
-  --color-accent: #D97050;
-  --color-text-main: #2D3038;
-  --font-main: 'Manrope', sans-serif;
-  --font-mono: 'Space Mono', monospace;
+    --color-bg: #F7F5F0;
+    --color-primary: #23252c;
+    --color-accent: #D97050;
+    --color-text-main: #2D3038;
+    --font-main: 'Manrope', sans-serif;
+    --font-mono: 'Space Mono', monospace;
 }
 
 /* reset & base */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
-body {
-    font-family: var(--font-main);
-    background-color: var(--color-bg);
-    color: var(--color-text-main);
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
-    text-align: center;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-a { text-decoration: none; color: inherit; transition: 0.3s; }
+body {
+    font-family: var(--font-main);
+    background-color: var(--color-bg);
+    color: var(--color-text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
 
 /* logo */
 .logo {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 800;
-  font-size: 1.8rem;
-  letter-spacing: -0.03em;
-  color: var(--color-primary);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+    font-size: 1.8rem;
+    letter-spacing: -0.03em;
+    color: var(--color-primary);
 }
 
 .logo-mark {
-  font-family: var(--font-mono);
-  font-size: 1.2rem;
-  opacity: 0.8;
-  color: var(--color-accent);
+    font-family: var(--font-mono);
+    font-size: 1.2rem;
+    opacity: 0.8;
+    color: var(--color-accent);
 }
 
 .logo-text {
-  letter-spacing: -0.03em;
+    letter-spacing: -0.03em;
 }
-
 
 /* estilos */
 .coming-soon-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
 }
 
 .coming-soon-logo {
-    margin-bottom: 30px;
-    transform: scale(1.1);
+    margin-bottom: 30px;
+    transform: scale(1.1);
 }
 
 .coming-soon-title {
-    font-size: clamp(1.8rem, 4vw, 3rem);
-    font-weight: 800;
-    line-height: 1.15;
-    letter-spacing: -0.02em;
-    margin-bottom: 20px;
-    max-width: 700px;
-    color: var(--color-primary);
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+    max-width: 700px;
+    color: var(--color-primary);
 }
 
 /* responsive */
 @media (max-width: 600px) {
-    .coming-soon-logo {
-        transform: scale(1.0);
-    }
-    .coming-soon-title {
-        font-size: 1.8rem;
-    }
+    .coming-soon-logo {
+        transform: scale(1);
+    }
+    .coming-soon-title {
+        font-size: 1.8rem;
+    }
 }
